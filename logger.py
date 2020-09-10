@@ -46,7 +46,10 @@ seq_num = 0
 frame_num = 0
 
 mon_select = 1
-folder = "apps/python/logger/captures/" # set dir for saving images
+folder = "apps/python/logger/captures2/" # set dir for saving images
+
+if os.path.exists(folder) == False:
+    os.mkdir(folder)
 
 def toggle(dummy, var):
     global recording, seq_num, frame_num, recButton
